@@ -1,4 +1,4 @@
-lt application files
+# Built application files
 *.apk
 *.ap_
 
@@ -32,4 +32,8 @@ proguard/
 captures/
 
 # Mac DS_Store files
+<<<<<<< HEAD
 .DS_Store/captures
+=======
+.DS_Store
+>>>>>>> 901ccdca34d6646d2d80fca0fe9d44d905a88b08
