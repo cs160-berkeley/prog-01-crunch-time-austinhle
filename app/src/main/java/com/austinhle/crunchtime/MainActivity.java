@@ -76,7 +76,6 @@ public class MainActivity extends ActionBarActivity {
         // http://www.livestrong.com/article/316751-calories-burned-in-leg-lifts/
         // http://www.newhealthadvisor.com/Jumping-Jacks-Calories.html
         // http://fatburn.com/free_tool_activity_burn.asp
-
         caloriesPer10Pounds = new HashMap<String, Double>();
         caloriesPer10Pounds.put(getString(R.string.pushup), 7.0);
         caloriesPer10Pounds.put(getString(R.string.situp), 1.5);
