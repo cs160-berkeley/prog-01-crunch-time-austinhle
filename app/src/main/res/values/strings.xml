@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">CrunchTime</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Exercise names.-->
+    <string name="pushup">Pushups</string>
+    <string name="situp">Situps</string>
+    <string name="squats">Squats</string>
+    <string name="leg_lift">Leg-lifts</string>
+    <string name="plank">Planks</string>
+    <string name="jumping_jacks">Jumping Jacks</string>
+    <string name="pullup">Pullups</string>
+    <string name="cycling">Cycling</string>
+    <string name="walking">Walking</string>
+    <string name="jogging">Jogging</string>
+    <string name="swimming">Swimming</string>
+    <string name="stair_climbing">Stair-climbing</string>
+
+    <string name="zero">---</string>
+
+    <string-array name="exercises">
+        <item>Pushups</item>
+        <item>Situps</item>
+        <item>Squats</item>
+        <item>Leg-lifts</item>
+        <item>Planks</item>
+        <item>Jumping Jacks</item>
+        <item>Pullups</item>
+        <item>Cycling</item>
+        <item>Walking</item>
+        <item>Jogging</item>
+        <item>Swimming</item>
+        <item>Stair-climbing</item>
+    </string-array>
+
+    <string name="reps">Reps</string>
+    <string name="mins">Mins</string>
+
+    <string name="calories">calories!</string>
+
+    <string name="welcome">Welcome to <b>CrunchTime</b>,\nyour one and only stop\nfor calorie conversion!</string>
+    <string name="of">of&#8230;</string>
+    <string name="i_did">I did&#8230;</string>
+    <string name="input">number</string>
+    <string name="i_want_to_burn">I want to burn</string>
+    <string name="crunch_time">Crunch Time!</string>
+
+    <string name="my_weight_is">My weight is&#8230;</string>
+    <string name="pounds">pounds (default: 150)</string>
+
+    <string name="calories_burned_default">Enter above fields and hit \'Crunch Time!\' to see calories burned!</string>
+    <string name="calories_burned">Nice job! You burned <b>%1$.2f</b> calories!\nEquivalent number of reps or mins for other exercises are shown below.</string>
+
+    <string name="calories_to_burn_default"> Enter desired number of calories to burn above and hit \'Crunch Time!\' to see what you need to do.</string>
+    <string name="calories_to_burn">Nice goal! To burn <b>%1$.0f</b> calories&#8230;</string>
+
+    <string name="mins_equivalent_label">%1$.0f %2$s %3$.0f %4$s</string>
+    <string name="reps_equivalent_label">%1$.0f %2$s</string>
+</resources>
+

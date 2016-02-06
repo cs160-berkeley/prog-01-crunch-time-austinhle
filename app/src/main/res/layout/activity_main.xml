@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.austinhle.crunchtime.MainActivity">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardBackgroundColor="#FFE082"
+            card_view:cardElevation="5dp">
+
+            <LinearLayout
+                android:id="@+id/intro_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/weight_icon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="10dp"
+                    android:src="@mipmap/ic_fitness_center_black_24dp"/>
+                <TextView
+                    android:id="@+id/intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="@string/welcome"
+                    android:textSize="14sp"
+                    android:fontFamily="Roboto"/>
+                <ImageView
+                    android:id="@+id/weight_icon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="10dp"
+                    android:src="@mipmap/ic_fitness_center_black_24dp"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/weight_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/my_weight_is"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1.0"
+                android:textAlignment="viewEnd"
+                android:text="@string/my_weight_is"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="Roboto"/>
+
+            <EditText
+                android:id="@+id/input_weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1.0"
+                android:textAlignment="center"
+                android:hint="@string/pounds"
+                android:inputType="number"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weight_layout"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/i_did"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.6"
+                android:paddingTop="10dp"
+                android:textAlignment="viewEnd"
+                android:text="@string/i_did"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1.0"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:hint="@string/input"
+                android:inputType="number"
+                android:textSize="12sp"/>
+
+            <RadioGroup
+                android:id="@+id/radio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:layout_weight="1.4"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/reps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reps"
+                    android:textSize="12sp"/>
+                <RadioButton
+                    android:id="@+id/mins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mins"
+                    android:textSize="12sp"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout1"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/instr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".6"
+                android:textAlignment="viewEnd"
+                android:text="@string/of"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="Roboto" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.4"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:entries="@array/exercises"
+                android:textSize="12sp"
+                android:fontFamily="Roboto" />
+
+            <Button
+                android:id="@+id/convert_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/crunch_time"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="Roboto"
+                android:backgroundTint="#A5D6A7"
+                android:onClick="convert" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/calories_burned"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardBackgroundColor="#A5D6A7"
+            card_view:cardElevation="5dp">
+
+            <LinearLayout
+                android:id="@+id/calories_burned_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/info_icon1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:padding="5dp"
+                    android:src="@mipmap/ic_info_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/calories_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:text="@string/calories_burned_default"
+                    android:textSize="12sp"
+                    android:fontFamily="Roboto"/>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/linear_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calories_burned"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/i_want_to_burn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1.0"
+                android:textAlignment="center"
+                android:text="@string/i_want_to_burn"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="Roboto"/>
+
+            <EditText
+                android:id="@+id/input_calories_to_burn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1.0"
+                android:textAlignment="center"
+                android:hint="@string/input"
+                android:inputType="number"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/calories_string"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="0.8"
+                android:textAlignment="center"
+                android:text="@string/calories"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="Roboto"/>
+
+            <Button
+                android:id="@+id/calculate_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="@string/crunch_time"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="Roboto"
+                android:backgroundTint="#B39DDB"
+                android:onClick="calculate" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/calories_to_burn"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardBackgroundColor="#B39DDB"
+            card_view:cardElevation="5dp">
+
+            <LinearLayout
+                android:id="@+id/calories_to_burn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/info_icon2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:padding="5dp"
+                    android:src="@mipmap/ic_info_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/calories_to_burn_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:text="@string/calories_to_burn_default"
+                    android:textSize="12sp"
+                    android:fontFamily="Roboto"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/info1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calories_to_burn"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/pushups"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/pushups_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/pushup_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/pushup"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/pushup_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pushup_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/situp"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/situp_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/situp_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/situp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/situp_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/situp_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info1"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/squat"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/squats_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/squats_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/squats"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/squats_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/squats_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/leg_lift"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/leg_lift_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/leg_lift_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/leg_lift"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/leg_lift_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/leg_lift_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info2"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/plank"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/plank_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/plank_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/plank"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/plank_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/plank_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/jumping_jacks"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/jumping_jacks_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/jumping_jacks_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/jumping_jacks"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/jumping_jacks_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/jumping_jacks_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info3"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/pullup"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/pullup_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/pullup_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/pullup"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/pullup_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pullup_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cycling"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/cycling_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/cycling_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/cycling"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/cycling_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cycling_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info4"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/walking"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/walking_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/walking_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/walking"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/walking_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/walking_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/jogging"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/jogging_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/jogging_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/jogging"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/jogging_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/jogging_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info5"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/swimming"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/swimming_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/swimming_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/swimming"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/swimming_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/swimming_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/stair_climbing"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardBackgroundColor="#9FA8DA"
+                card_view:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/stair_climbing_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/stair_climbing_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/stair_climbing"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="Roboto"/>
+                    <TextView
+                        android:id="@+id/stair_climbing_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/stair_climbing_label"
+                        android:padding="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/zero"
+                        android:textSize="12sp"
+                        android:fontFamily="Roboto" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
